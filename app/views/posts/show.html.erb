@@ -1,5 +1,6 @@
+<strong><h1>Post</h1></strong>
 <p>
-  <strong>User:</strong>
+  <strong >User:</strong>
   <%= @post.user.name %>
 </p>
   
@@ -15,7 +16,9 @@
   <%= @post.content %>
 </p>
 
-<%= render 'comments/comment' %>
+<strong><h1>Comment</h1></strong>
+<%= render 'comments/comment'%>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<%= link_to 'Edit', edit_post_path(@post),class: 'link-to-text-color' %> |
+<%= link_to 'Back', posts_path,class: 'link-to-text-color' %>
+

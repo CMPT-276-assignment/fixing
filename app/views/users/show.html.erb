@@ -1,8 +1,9 @@
 
 <div class="box">
-    <h3 style="color:black">User</h3>
+    <strong><h3>User</h3></strong>
     <p>Name: <%= @user.name if @user.name %></p>
     <p>Email: <%= @user.email if @user.email %></p>
+    <strong><h3>Post</h3></strong>
     <% @user_posts.each do |post| %>
         <%= link_to post.title, edit_post_path(post) %><br />
     <% end %>

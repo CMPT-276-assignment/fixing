@@ -1,22 +1,38 @@
 // import the CSS framework
 @import "bootstrap-sprockets";
 @import "bootstrap";
-.box {
-  margin: 30px;
-  background-color: #ffffff;
-  border: 1px solid black;
-  opacity: 0.8;
-  filter: alpha(opacity=60);
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
 }
-.centering_box {
-    border-radius: 1em;
-    padding: 1em;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
+
+td, th {
+    border: 1px solid #dddddd;
+    border-color: black;
+    text-align: center;
+    padding: 8px;
 }
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.link-to-text-color { color: grey}
+.link-to-text-color-2 { color: red }
+
+.link-to-text-color:visited {
+    color: grey !important;
+    background-color: transparent;
+    text-decoration: none;
+}
+.link-to-text-color-2:visited {
+    color: red !important;
+    background-color: transparent;
+    text-decoration: none;
+}
+
 h1 {
     font-family: Helvetica;
     font-size: 250%;
@@ -25,11 +41,11 @@ body {
     font-family: Arial, Helvetica;
     width: 100%;
     height: 400px;
-    background-color: gainsboro;
-    background-image: url("login-page-background.jpg");
+    color: black;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 // make all images responsive by default
 img {
   @extend .img-responsive;
@@ -53,6 +69,7 @@ img {
 .form-centered {
   @extend .col-md-6;
   @extend .text-center;
+  
   }
 .submit {
   @extend .btn;
@@ -80,11 +97,14 @@ section {
   padding-top: 30px;
   max-width: 320px;
   margin: 0 auto;
+  
+  
 }
 .authform form {
   @extend .well;
   @extend .well-lg;
   padding-bottom: 40px;
+  background-color: #F0B27A  ;
 }
 .authform .right {
   float: right !important;

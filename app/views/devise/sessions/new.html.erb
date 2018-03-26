@@ -1,5 +1,6 @@
+
 <div class="authform">
-  <h1 align="center" style="color:white;"> What Should I Eat </h1>
+  <h1 align="center"> What Should I Eat </h1>
   <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :role => 'form'}) do |f| %>
     <h3>Sign in</h3>
     <%= devise_error_messages! %>
@@ -27,3 +28,4 @@
       <% end -%>
   <% end %>
 </div>
+

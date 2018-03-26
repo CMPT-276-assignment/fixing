@@ -1,5 +1,5 @@
 
-<h1>Posts</h1>
+<strong><h1>Posts</h1></strong><br>
 
 <table>
   <thead>
@@ -7,7 +7,7 @@
       <th>User</th>
       <th>Title</th>
       <th>Content</th>
-      <th colspan="3"></th>
+      
     </tr>
   </thead>
 
@@ -18,9 +18,11 @@
         <td><%= post.title %></td>
         <td><%= post.content %></td>
         <td><%= image_tag post.image.url(:thumb)%></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+        <td><i><%= link_to 'Show', post ,class: 'link-to-text-color' %></i></td>
+        <td><i><%= link_to 'Edit', edit_post_path(post),class: 'link-to-text-color' %></i></td>
+        <td><i><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' },class: 'link-to-text-color' %></i></td>
+        
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Post', new_post_path %>
+<%= link_to 'New Post', new_post_path,class: 'link-to-text-color-2' %>
