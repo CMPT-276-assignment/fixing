@@ -32,13 +32,12 @@
   
     <%= f.submit 'Update', :class => 'button right' %>
     <br><br><br>
-    <div class="authform">
-    <h3 style="color:black">Cancel Account</h3>
-    <h5 align="left">Unhappy? We'll be sad to see you go.</h5>
-    <br>
-    <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'button right' %>
-    </div>
-  
-  <% end %>
+<% end %>
+<div class="authform">
+  <h3 style="color:black">Cancel Account</h3>
+  <h5 align="left">Unhappy? We'll be sad to see you go.</h5>
+  <br>
+  <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'button right' %>
+  </div>
 </div>
 
