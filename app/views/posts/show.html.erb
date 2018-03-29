@@ -13,18 +13,8 @@
 
 <p>
   <strong>Content:</strong>
-  <div style="width: 700px; overflow: auto; height: 150px; margin:0px 35px">
-    <%= @post.content %>
-  </div>
+  <%= @post.content %>
 </p>
-<%= image_tag @post.image.url(:medium), :class => "image-align" %>
-<br>
-<p>
-<%= link_to 'Back', posts_path,class: 'link-to-text-color' %>
-</p>
-<br>
-<strong><h1>Comment</h1></strong>
-<%= render 'comments/comment'%>
 
 <strong><h1>Comment</h1></strong>
 <%= render 'comments/comment'%>
