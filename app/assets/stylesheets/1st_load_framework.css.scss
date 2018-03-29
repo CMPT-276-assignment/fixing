@@ -21,6 +21,7 @@ tr:nth-child(even) {
 
 .link-to-text-color { color: grey}
 .link-to-text-color-2 { color: red }
+.image-align {margin:0px 35px}
 
 .link-to-text-color:visited {
     color: grey !important;
@@ -37,11 +38,13 @@ h1 {
     font-family: Helvetica;
     font-size: 250%;
 }
+
 body {
     font-family: Arial, Helvetica;
     width: 100%;
     height: 400px;
     color: black;
+    background-image: url("Food2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -131,7 +134,7 @@ section {
 
 
 textarea {
-    width: 100%;
+    width: 60%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
