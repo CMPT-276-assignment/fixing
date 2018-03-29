@@ -7,6 +7,15 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
   end
+  
+  def list
+    @posts = Post.all
+    if params[:search]
+      @posts = Post.search(params[:search]).order("created_at DESC")
+    else
+      @posts = Post.all.order("created_at DESC")
+    end
+  end
 
   # GET /posts/1
   # GET /posts/1.json
@@ -25,7 +34,8 @@ class PostsController < ApplicationController
 
   # POST /posts
   # POST /posts.json
-  def create
+  def update
+  
     @post = current_user.posts.build(post_params)
     respond_to do |format|
       if !verify_recaptcha(model: @post) || !@post.save
@@ -41,15 +51,17 @@ class PostsController < ApplicationController
 
   # PATCH/PUT /posts/1
   # PATCH/PUT /posts/1.json
-  def update
+  def create
+    @post = current_user.posts.build(post_params)
     respond_to do |format|
-      if @post.update(post_params)
-        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
-        format.json { render :show, status: :ok, location: @post }
-      else
-        format.html { render :edit }
+      if !verify_recaptcha(model: @post) || !@post.save
+        format.html { render :new }
         format.json { render json: @post.errors, status: :unprocessable_entity }
+      else
+        format.html { redirect_to @post, notice: 'Post was successfully created.' }
+        format.json { render :show, status: :created, location: @post }
       end
+
     end
   end
 

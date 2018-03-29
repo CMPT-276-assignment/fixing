@@ -3,9 +3,12 @@
   <strong >User:</strong>
   <%= @post.user.name %>
 </p>
+<<<<<<< HEAD
 
 <%= image_tag @post.image.url(:medium) %>
 
+=======
+>>>>>>> Chi
 <p>
   <strong>Title:</strong>
   <%= @post.title %>
@@ -13,12 +16,25 @@
 
 <p>
   <strong>Content:</strong>
-  <%= @post.content %>
+  <div style="width: 700px; overflow: auto; height: 150px; margin:0px 35px">
+    <%= @post.content %>
+  </div>
 </p>
+<%= image_tag @post.image.url(:medium), :class => "image-align" %>
+<br>
+<p>
+<%= link_to 'Back', posts_path,class: 'link-to-text-color' %>
+</p>
+<br>
+<strong><h1>Comment</h1></strong>
+<%= render 'comments/comment'%>
 
+<<<<<<< HEAD
 <strong><h1>Comment</h1></strong>
 <%= render 'comments/comment'%>
 
 <%= link_to 'Edit', edit_post_path(@post),class: 'link-to-text-color' %> |
 <%= link_to 'Back', posts_path,class: 'link-to-text-color' %>
 
+=======
+>>>>>>> Chi
