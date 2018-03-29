@@ -6,7 +6,7 @@
     <tr>
       <th>User</th>
       <th>Title</th>
-      <th>Content</th>
+      <!--<th>Content</th>-->
       
     </tr>
   </thead>
@@ -16,7 +16,6 @@
       <tr>
         <td><%= post.user.name %></td>
         <td><%= post.title %></td>
-        <td><%= post.content %></td>
         <td><%= image_tag post.image.url(:thumb)%></td>
         
         <td><i><%= link_to 'Show', post ,class: 'link-to-text-color' %></i></td>

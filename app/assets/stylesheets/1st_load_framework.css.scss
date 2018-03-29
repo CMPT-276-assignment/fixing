@@ -21,27 +21,45 @@ tr:nth-child(even) {
 
 .link-to-text-color { color: grey}
 .link-to-text-color-2 { color: red }
+<<<<<<< HEAD
+=======
+.image-align {margin:0px 35px}
+>>>>>>> Chi
 
 .link-to-text-color:visited {
     color: grey !important;
     background-color: transparent;
     text-decoration: none;
+<<<<<<< HEAD
 }
 .link-to-text-color-2:visited {
     color: red !important;
     background-color: transparent;
     text-decoration: none;
 }
+=======
+}
+.link-to-text-color-2:visited {
+    color: red !important;
+    background-color: transparent;
+    text-decoration: none;
+}
+>>>>>>> Chi
 
 h1 {
     font-family: Helvetica;
     font-size: 250%;
 }
+
 body {
     font-family: Arial, Helvetica;
     width: 100%;
     height: 400px;
     color: black;
+<<<<<<< HEAD
+=======
+    background-image: url("Food2.jpg");
+>>>>>>> Chi
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -69,7 +87,11 @@ img {
 .form-centered {
   @extend .col-md-6;
   @extend .text-center;
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> Chi
   }
 .submit {
   @extend .btn;
@@ -97,14 +119,22 @@ section {
   padding-top: 30px;
   max-width: 350px;
   margin: 0 auto;
+<<<<<<< HEAD
 
+=======
+  
+  
+>>>>>>> Chi
 }
 .authform form {
   @extend .well;
   @extend .well-lg;
   padding-bottom: 40px;
   background-color: #F0B27A  ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> Chi
 }
 .authform .right {
   float: right !important;
@@ -131,7 +161,11 @@ section {
 
 
 textarea {
+<<<<<<< HEAD
     width: 65%;
+=======
+    width: 60%;
+>>>>>>> Chi
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
