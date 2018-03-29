@@ -1,18 +1,18 @@
 class Post < ApplicationRecord
   belongs_to :user
   has_many :comments, dependent: :destroy
-  
+
   validates :title, presence: true
   validates :content, presence: true
   validates :user, presence: true
-  
+
   def to_s
       title
   end
-  
+
   def self.search(search)
       if search
-      where(['title LIKE ? OR content LIKE ?', "%#{search}%", "%#{search}%"])
+      where(['title ILIKE ? OR content ILIKE ?', "%#{search}%", "%#{search}%"])
       # where(['content LIKE ?', "%#{search}%"])
       else
       scoped

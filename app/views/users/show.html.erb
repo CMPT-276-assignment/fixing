@@ -1,13 +1,4 @@
-
-<<<<<<< HEAD
 <div class="box">
-=======
-<<<<<<< HEAD
-
-=======
-<div class="box">
->>>>>>> Chi
->>>>>>> 16d7f78d3995c6fc85cdec9393ea2981e377df13
     <strong><h3>User</h3></strong>
     <p>Name: <%= @user.name if @user.name %></p>
     <p>Email: <%= @user.email if @user.email %></p>
@@ -16,15 +7,12 @@
       <tr>
         <td><%= post.title %></td>
         <br>
-        
+
         <td><i><%= link_to 'Show', post ,class: 'link-to-text-color' %></i></td>
         <td><i><%= link_to 'Edit', edit_post_path(post),class: 'link-to-text-color' %></i></td>
         <td><i><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' },class: 'link-to-text-color' %></i></td>
         <br><br>
-        
+
       </tr>
     <% end %>
 </div>
-
-
-
