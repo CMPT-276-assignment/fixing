@@ -42,7 +42,4 @@ group :test do
   gem 'selenium-webdriver'
 end
 gem 'recaptcha', require: 'recaptcha/rails'
-<<<<<<< HEAD
 gem 'bcrypt'
-=======
->>>>>>> Chi
