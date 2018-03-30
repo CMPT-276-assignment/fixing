@@ -11,12 +11,19 @@ class Post < ApplicationRecord
   end
 
   def self.search(search)
-      if search
-      where(['title ILIKE ? OR content ILIKE ?', "%#{search}%", "%#{search}%"])
-      # where(['content LIKE ?', "%#{search}%"])
-      else
+      # if search
+      #   where(['title ILIKE ? OR content ILIKE ?', "%#{search}%", "%#{search}%"])
+      # else
+      # scoped
+      # end
+    if search
+      words = search.to_s.strip.split
+      words.map! { |word| "content LIKE '%#{word}%'" }
+      sql = words.join(" OR ")
+      self.where(sql)
+    else
       scoped
-      end
+    end
   end
 
 
