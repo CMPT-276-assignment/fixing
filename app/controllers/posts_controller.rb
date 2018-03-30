@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
   end
-  
+
   def list
    @posts = Post.all
     if params[:search]
@@ -35,10 +35,10 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def update
-  
-    @post = current_user.posts.build(post_params)
+
+    # @post = current_user.posts.build(post_params)
     respond_to do |format|
-      if !verify_recaptcha(model: @post) || !@post.save
+      if !@post.update(post_params)
         format.html { render :new }
         format.json { render json: @post.errors, status: :unprocessable_entity }
       else
@@ -85,7 +85,7 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:title, :content, :image)
     end
-    
+
     def authorize
       if current_user.nil?
         redirect_to login_url, alert: "Not authorize! Please log in."

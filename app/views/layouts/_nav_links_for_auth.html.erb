@@ -3,7 +3,8 @@
   <li><%= link_to "Profile", current_user %></li>
   <li><%= link_to 'Edit account', edit_user_registration_path %></li>
   <li><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>
-  <li><%= form_tag(myprojects_url, :method => "get", id: "search-form") do %>
+  <li style="margin-left: 300px">
+  <%= form_tag(myprojects_url, :method => "get", id: "search-form") do %>
   <%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
   <%= submit_tag "Search" %>
   <% end %></li>

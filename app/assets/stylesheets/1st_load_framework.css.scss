@@ -21,6 +21,7 @@ tr:nth-child(even) {
 
 .link-to-text-color { color: grey}
 .link-to-text-color-2 { color: red }
+.image-align {margin:0px 35px}
 
 .link-to-text-color:visited {
     color: grey !important;
@@ -42,7 +43,7 @@ body {
     width: 100%;
     height: 400px;
     color: black;
-    background-image: url("http://stiritupmagazine.co.uk/wp-content/uploads/2015/03/Hospital-food-background.jpg");
+    background-image: image-url("Food2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
