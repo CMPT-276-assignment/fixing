@@ -1,8 +1,12 @@
 # What Should I Eat - CMPT 276 Spring 2018
 
-What Should I Eat is a web application that 
-store information about food recipes
+# Project Description
+What Should I Eat is a web application that stores information about food recipes.
 
-Users can register for an account, create and edit
-food recipe posts, and browse through the list of food recipe posts
-made by other users.
+# How to use:
+- Users need to register an account to use the application.
+- After creating an account, Users can create, edit or view food recipe posts made by other users.
+
+# Framework:
+- HTML, CSS, Javascript
+- Ruby on Rails
