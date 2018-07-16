@@ -87,7 +87,7 @@ sudo apt-get install imagemagick
 
 - Run bin/rake -AD db to see all db-related tasks
 
-- THis is for installing image magic widget
+- This is for installing image magic widget
 
 sudo apt-get update
 
